@@ -11,6 +11,8 @@ echo $HERE
 echo --------------------------------------------------------
 echo Updating Submodules
 echo --------------------------------------------------------
+git submodule init
+git submodule update
 git submodule foreach --recursive git submodule update --init
 
 echo --------------------------------------------------------
