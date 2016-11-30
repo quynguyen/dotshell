@@ -9,6 +9,11 @@ popd > /dev/null
 echo $HERE
 
 echo --------------------------------------------------------
+echo Updating Submodules
+echo --------------------------------------------------------
+git submodule foreach --recursive git submodule update --init
+
+echo --------------------------------------------------------
 echo Symlinking Home Dotfiles
 echo --------------------------------------------------------
 for dotfile in `ls ./dotfiles`; do ln -snf $HERE/dotfiles/$dotfile "$HOME/.$dotfile"; done
