@@ -1,7 +1,7 @@
 # dotshell
 
 ## Quickstart
-```
+```bash
 git clone git@github.com:quynguyen/dotshell.git $HOME/.shell
 cd $HOME/.shell
 ./setup.sh
@@ -9,12 +9,12 @@ cd $HOME/.shell
 
 ## Purpose
 Quy's peronsal shell environment portable across computers.
-Checking this repo out into $HOME/.shell and running setup.sh, will create all the symlinks off $HOME
+Checking this repo out into $HOME/.shell and running setup.sh, will fetch and update git submodules this repo depends on, and creates all the symlinks off $HOME to configure the shell, tools, and applications.
 
 ## Requirements 
 
 ### Espected to be already installed
-* git (To check it out)
+* git (Duh)
 
 ### Contains plugins and tools for (thus they should be already installed)
 * bash
@@ -23,7 +23,7 @@ Checking this repo out into $HOME/.shell and running setup.sh, will create all t
 * tmux
 
 ### Other requirements
-* Ruby -- (Mostly for Vim's plugin manager, Pathogen)
+* Ruby (Mostly for Vim's plugin manager, Pathogen)
 
 ### Nice to Haves
 * [Tmuxinator](https://github.com/tmuxinator/tmuxinator) 
