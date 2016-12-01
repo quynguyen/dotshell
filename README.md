@@ -27,6 +27,7 @@ Checking this repo out into $HOME/.shell and running setup.sh, will fetch and up
 
 ### Nice to Haves
 * [Tmuxinator](https://github.com/tmuxinator/tmuxinator) 
+* xclip (for transfering text between clipboards)
 
 ## Note
 It's not intended to be portable across people, but certainly there are patterns that could be useful for everyone.  One day, I may extract the patterns out into their own project.  Until then, YAGNI.
