@@ -1,6 +1,3 @@
-[submodule "config/ssh-config"]
-	path = config/ssh-config
-	url = git@github.com:quynguyen/ssh-config.git
 [submodule "config/vim-config"]
 	path = config/vim-config
 	url = git@github.com:quynguyen/vim-config.git
@@ -16,9 +13,6 @@
 [submodule "config/shell-config"]
 	path = config/shell-config
 	url = git@github.com:quynguyen/shell-config.git
-[submodule "config/shell-scripts"]
-	path = config/shell-scripts
-	url = git@github.com:quynguyen/shell-scripts.git
 [submodule "config/terminal-config"]
 	path = config/terminal-config
 	url = git@github.com:quynguyen/terminal-config.git
