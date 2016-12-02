@@ -68,3 +68,10 @@ echo --------------------------------------------------------
 echo Refreshing Fonts
 echo --------------------------------------------------------
 fc-cache -vf ~/.fonts
+
+echo --------------------------------------------------------
+echo Updating ~/.bashrc
+echo --------------------------------------------------------
+appendage="source ~/.shell/config/shell-config/bash/bashrc"
+grep -nq "$appendage" ~/.bashrc || echo "$appendage" >> ~/.bashrc
+source ~/.bashrc
