@@ -40,7 +40,7 @@ echo --------------------------------------------------------
 echo --------------------------------------------------------
 echo Setting up local storage
 echo --------------------------------------------------------
-[ ! -e $STORE ] && mkdir -v $STORE/{apps,cache}
+[ ! -e $STORE ] && mkdir -v --parents $STORE/{apps,cache}
 ln -vsnf $STORE $STORELINK
 
 echo --------------------------------------------------------
