@@ -18,6 +18,7 @@ echo --------------------------------------------------------
 git submodule init
 git submodule update
 git submodule foreach --recursive git submodule update --init
+git submodule foreach --recursive git checkout master
 
 #############################################################
 # Source in functions from "core"
@@ -70,8 +71,16 @@ echo --------------------------------------------------------
 fc-cache -vf ~/.fonts
 
 echo --------------------------------------------------------
+echo Creating app links
+echo --------------------------------------------------------
+for app in $( ls $APPSTORE ); do
+	prefix=${app%%-*}
+	[ -e $APPSTORE/.versions/$prefix ] && ln -vsnf $APPSTORE/$app $APPS/$prefix
+done
+
+echo --------------------------------------------------------
 echo Updating ~/.bashrc
 echo --------------------------------------------------------
-appendage="source ~/.shell/config/shell-config/bash/bashrc"
+appendage="source ~/.shell/config/shell-config/bash/profile"
 grep -nq "$appendage" ~/.bashrc || echo "$appendage" >> ~/.bashrc
 source ~/.bashrc
