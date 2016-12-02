@@ -33,32 +33,8 @@ for file in `ls ./dotfiles`; do
 	#eg "config" to ".config"#
 	sourceFile=$HERE/dotfiles/$file
 	dotFile="$HOME/.${file}"
-#	renamedDotFile="${dotFile}-$(date +%^s)"
 
 	relink $sourceFile $dotFile
-
-	#Is the dotFile a directory that already exists
-	#.. and dotFile isn't pointing to the same location to the sourceFile
-#	if [ -d $dotFile ] && [ ! $dotFile -ef $sourceFile ]; then
-#		echo -----------------------------------------
-#		echo "Renaming ${dotFile} to ${renamedDotFile}"
-#		echo -----------------------------------------
-#		#rename it
-#		mv -v $dotFile $renamedDotFile
-#	fi
-#
-#	#Create the symlinks in $HOME
-#	ln -vsnf $sourceFile $dotFile; 
-#
-#	#Move over any existing files
-#	if [ -d $renamedDotFile ]; then
-#		echo -----------------------------------------
-#		echo "Moving files from ${renamedDotFile} to ${dotFile}"
-#		echo -----------------------------------------
-#		mv -v $renamedDotFile/* $dotFile/
-#		rm -vrf $renamedDotFile
-#		unset renamedDotFile
-#	fi
 done
 
 
