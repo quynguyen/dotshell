@@ -22,3 +22,6 @@
 [submodule "config/tmuxinator-config"]
 	path = config/tmuxinator-config
 	url = git@github.com:quynguyen/tmuxinator-config.git
+[submodule "config/scripts-config"]
+	path = config/scripts-config
+	url = git@github.com:quynguyen/scripts-config.git
