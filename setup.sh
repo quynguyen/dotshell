@@ -19,8 +19,12 @@ git submodule init
 git submodule update
 git submodule foreach --recursive git submodule update --init
 
-# Source in some core.sh
-source ./config/shell-config/common/core.sh
+#############################################################
+# Source in functions from "core"
+### Simply for my custom function "relink", that safely creates
+### symlinks, or copies of the contents if they already exist
+#############################################################
+source ./config/shell-config/common/core
 
 echo --------------------------------------------------------
 echo Symlinking Home Dotfiles
