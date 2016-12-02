@@ -26,6 +26,18 @@ git submodule foreach --recursive git submodule update --init
 #############################################################
 source ./config/shell-config/common/core
 
+
+echo --------------------------------------------------------
+echo Setting up bin dir
+echo --------------------------------------------------------
+ln -vsnf ./config/scripts-config/bin $HERE/bin
+
+echo --------------------------------------------------------
+echo Setting up local storage
+echo --------------------------------------------------------
+[ ! -e $STORE ] && mkdir -v $STORE/{apps,cache}
+ln -vsnf $STORE $STORELINK
+
 echo --------------------------------------------------------
 echo Symlinking Home Dotfiles
 echo --------------------------------------------------------
