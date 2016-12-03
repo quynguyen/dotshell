@@ -1,0 +1,36 @@
+[submodule ".submodules/vim-config"]
+	path = .submodules/vim-config
+	url = git@github.com:quynguyen/vim-config.git
+	branch = master
+[submodule ".submodules/dircolors-config"]
+	path = .submodules/dircolors-config
+	url = git@github.com:quynguyen/dircolors-config.git
+	branch = master
+[submodule ".submodules/font-config"]
+	path = .submodules/font-config
+	url = git@github.com:quynguyen/font-config.git
+	branch = master
+[submodule ".submodules/npm-config"]
+	path = .submodules/npm-config
+	url = git@github.com:quynguyen/npm-config.git
+	branch = master
+[submodule ".submodules/shell-config"]
+	path = .submodules/shell-config
+	url = git@github.com:quynguyen/shell-config.git
+	branch = master
+[submodule ".submodules/terminal-config"]
+	path = .submodules/terminal-config
+	url = git@github.com:quynguyen/terminal-config.git
+	branch = master
+[submodule ".submodules/tmux-config"]
+	path = .submodules/tmux-config
+	url = git@github.com:quynguyen/tmux-config.git
+	branch = master
+[submodule ".submodules/tmuxinator-config"]
+	path = .submodules/tmuxinator-config
+	url = git@github.com:quynguyen/tmuxinator-config.git
+	branch = master
+[submodule ".submodules/scripts-config"]
+	path = .submodules/scripts-config
+	url = git@github.com:quynguyen/scripts-config.git
+	branch = master
