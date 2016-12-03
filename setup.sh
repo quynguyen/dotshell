@@ -44,7 +44,7 @@ ln -vsnf $STORE $STORELINK
 echo --------------------------------------------------------
 echo Symlinking Home Dotfiles
 echo --------------------------------------------------------
-for file in `ls $DOTFILES`; do 
+for file in $( ls $DOTFILES ); do 
 	#eg "config" to ".config"#
 	sourceFile=$DOTFILES/$file
 	dotFile="$HOME/.${file}"
@@ -52,6 +52,14 @@ for file in `ls $DOTFILES`; do
 	relink $sourceFile $dotFile
 done
 
+echo --------------------------------------------------------
+echo Moving Repos and Caches to $STORE, and replacing them with symlinks
+echo --------------------------------------------------------
+cat $CACHES | while read cache; do 
+	dotCache="$HOME/.${cache}"
+	name=$cache
+	moveAndLink $dotCache $CACHESTORE $name
+done
 
 echo --------------------------------------------------------
 echo Overlaying Custom Configurations into their existing locations
