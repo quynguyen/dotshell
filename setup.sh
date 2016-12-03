@@ -10,28 +10,26 @@ popd > /dev/null
 echo --------------------------------------------------------
 echo The fullpath to here is:
 echo --------------------------------------------------------
-echo $HERE
+echo $ENV
+export ENV=$HERE
 
 echo --------------------------------------------------------
 echo Updating Submodules
 echo --------------------------------------------------------
-git submodule init
-git submodule update
+git submodule update --init --remote
 git submodule foreach --recursive git submodule update --init
-git submodule foreach --recursive git checkout master
 
 #############################################################
 # Source in functions from "core"
 ### Simply for my custom function "relink", that safely creates
 ### symlinks, or copies of the contents if they already exist
 #############################################################
-source ./config/shell-config/common/core
-
+source .submodules/shell-config/common/core
 
 echo --------------------------------------------------------
 echo Setting up bin dir
 echo --------------------------------------------------------
-ln -vsnf ./config/scripts-config/bin $HERE/bin
+ln -vsnf .submodules/scripts-config/bin $HERE/bin
 
 echo --------------------------------------------------------
 echo Setting up apps dir
@@ -47,9 +45,9 @@ ln -vsnf $STORE $STORELINK
 echo --------------------------------------------------------
 echo Symlinking Home Dotfiles
 echo --------------------------------------------------------
-for file in `ls ./dotfiles`; do 
+for file in `ls $DOTFILES`; do 
 	#eg "config" to ".config"#
-	sourceFile=$HERE/dotfiles/$file
+	sourceFile=$DOTFILES/$file
 	dotFile="$HOME/.${file}"
 
 	relink $sourceFile $dotFile
@@ -59,9 +57,9 @@ done
 echo --------------------------------------------------------
 echo Overlaying Custom Configurations into their existing locations
 echo --------------------------------------------------------
-for overlay in `find $HERE/overlays/ -mindepth 1  -type d -printf "%f\n"`; do
-	for link in `ls $HERE/overlays/$overlay`; do
-		relink $HERE/overlays/$overlay/$link $HOME/$overlay/$link
+for overlay in `find $OVERLAYS -mindepth 1  -type d -printf "%f\n"`; do
+	for link in `ls $OVERLAYS/$overlay`; do
+		relink $OVERLAYS/$overlay/$link $HOME/$overlay/$link
 	done
 done
 
