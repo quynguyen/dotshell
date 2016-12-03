@@ -6,7 +6,6 @@ pushd `dirname $0` > /dev/null
 HERE=`pwd`
 popd > /dev/null
 
-
 echo --------------------------------------------------------
 echo The fullpath to here is:
 echo --------------------------------------------------------
@@ -24,12 +23,12 @@ git submodule foreach --recursive git submodule update --init
 ### Simply for my custom function "relink", that safely creates
 ### symlinks, or copies of the contents if they already exist
 #############################################################
-source .submodules/shell-config/common/core
+source ./.submodules/shell-config/common/core
 
 echo --------------------------------------------------------
 echo Setting up bin dir
 echo --------------------------------------------------------
-ln -vsnf .submodules/scripts-config/bin $HERE/bin
+ln -vsnf ./.submodules/scripts-config/bin $HERE/bin
 
 echo --------------------------------------------------------
 echo Setting up apps dir
@@ -79,6 +78,8 @@ done
 echo --------------------------------------------------------
 echo Updating ~/.bashrc
 echo --------------------------------------------------------
-appendage="source ~/.shell/config/shell-config/bash/profile"
-grep -nq "$appendage" ~/.bashrc || echo "$appendage" >> ~/.bashrc
+line1="export ENV=$ENV"
+line2="source $ENV/config/includes/bashrc"
+grep -nq "$line1" ~/.bashrc || echo "$line1" >> ~/.bashrc
+grep -nq "$line2" ~/.bashrc || echo "$line2" >> ~/.bashrc
 source ~/.bashrc
