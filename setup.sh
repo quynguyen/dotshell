@@ -56,7 +56,7 @@ done
 echo --------------------------------------------------------
 echo Overlaying Custom Configurations into their existing locations
 echo --------------------------------------------------------
-for overlay in `find $OVERLAYS -mindepth 1  -type d -printf "%f\n"`; do
+for overlay in $( find $OVERLAYS -mindepth 1  -type d -printf "%f\n" ); do
 	for link in `ls $OVERLAYS/$overlay`; do
 		relink $OVERLAYS/$overlay/$link $HOME/$overlay/$link
 	done
@@ -79,7 +79,7 @@ echo --------------------------------------------------------
 echo Updating ~/.bashrc
 echo --------------------------------------------------------
 line1="export ENV=$ENV"
-line2="source $ENV/config/includes/bashrc"
+line2="source $ENV/.submodules/shell-config/bash/profile"
 grep -nq "$line1" ~/.bashrc || echo "$line1" >> ~/.bashrc
 grep -nq "$line2" ~/.bashrc || echo "$line2" >> ~/.bashrc
 source ~/.bashrc
