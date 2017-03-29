@@ -71,6 +71,10 @@ for overlay in $( find $OVERLAYS -mindepth 1  -type d -printf "%f\n" ); do
 done
 
 echo --------------------------------------------------------
+echo Handling concats
+echo --------------------------------------------------------
+
+echo --------------------------------------------------------
 echo Refreshing Fonts
 echo --------------------------------------------------------
 fc-cache -vf ~/.fonts
