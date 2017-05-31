@@ -9,8 +9,8 @@ popd > /dev/null
 echo --------------------------------------------------------
 echo The fullpath to here is:
 echo --------------------------------------------------------
-echo $ENV
 export ENV=$HERE
+echo $ENV
 
 echo --------------------------------------------------------
 echo Updating Submodules
@@ -38,7 +38,7 @@ echo --------------------------------------------------------
 echo --------------------------------------------------------
 echo Setting up local storage
 echo --------------------------------------------------------
-[ ! -e $STORE ] && mkdir -v --parents $STORE/{apps,cache}
+[ ! -e $STORE ] && mkdir -v -p $STORE/{apps,cache}
 ln -vsnf $STORE $STORELINK
 
 echo --------------------------------------------------------
