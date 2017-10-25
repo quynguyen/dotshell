@@ -34,3 +34,6 @@
 	path = .submodules/scripts-config
 	url = git@github.com:quynguyen/scripts-config.git
 	branch = master
+[submodule ".submodules/styleguide"]
+	path = .submodules/styleguide
+	url = https://github.com/google/styleguide.git
