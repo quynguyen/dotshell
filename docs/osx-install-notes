@@ -2,4 +2,21 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 #Brew Install
-
+antigen 2.2.1
+autoconf 2.69
+cdargs 1.35
+findutils 4.6.0
+git 2.14.3
+libevent 2.1.8
+libyaml 0.1.7
+maven 3.5.0
+openssl 1.0.2l
+pkg-config 0.29.2
+rbenv 1.1.1
+readline 7.0.3_1
+ruby 2.4.2_1
+ruby-build 20170914
+tmux 2.6
+tmuxinator-completion 0.10.0
+vim 8.0.1200
+zsh-syntax-highlighting 0.6.0
