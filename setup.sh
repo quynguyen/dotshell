@@ -12,13 +12,6 @@ echo --------------------------------------------------------
 export ENV=$HERE
 echo $ENV
 
-echo --------------------------------------------------------
-echo Updating Submodules
-echo --------------------------------------------------------
-git submodule update --init --remote
-git submodule foreach --recursive git submodule update --init
-git submodule foreach --recursive git checkout master
-
 #############################################################
 # Source in functions from "core"
 ### Simply for my custom function "relink", that safely creates
