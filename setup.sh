@@ -90,8 +90,24 @@ done
 echo --------------------------------------------------------
 echo Updating ~/.bashrc
 echo --------------------------------------------------------
-line1="export ENV=$ENV"
-line2="source $ENV/.submodules/shell-config/bash/profile"
-grep -nq "$line1" ~/.bashrc || echo "$line1" >> ~/.bashrc
-grep -nq "$line2" ~/.bashrc || echo "$line2" >> ~/.bashrc
-source ~/.bashrc
+bash_lines=(
+	"export ENV=$ENV"
+	"source $ENV/.submodules/shell-config/bash/profile"
+)
+for l in "${bash_lines[@]}"; do
+	grep -nq "$l" ~/.bashrc || echo "$l" >> ~/.bashrc
+done
+[ -z ${BASH+X} ] && source ~/.bashrc
+
+echo --------------------------------------------------------
+echo Updating ~/.zshrc
+echo --------------------------------------------------------
+zsh_lines=(
+	"plugins=(git)"
+	"export ENV=$ENV"
+	"source $ENV/.submodules/shell-config/zsh/profile"
+)
+for l in "${zsh_lines[@]}"; do
+	grep -nq "$l" ~/.zshrc || echo "$l" >> ~/.zshrc
+done
+[ -z ${ZSH_NAME+X} ] && source ~/.zshrc
