@@ -104,4 +104,4 @@ zsh_lines=(
 for l in "${zsh_lines[@]}"; do
 	grep -nq "$l" ~/.zshrc || echo "$l" >> ~/.zshrc
 done
-[ -z ${ZSH_NAME+X} ] && source ~/.zshrc
+[ -z ${ZSH_NAME+X} ] && exec zsh
