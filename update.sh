@@ -13,7 +13,7 @@ echo
 echo --------------------------------------------------------
 git pull --rebase
 #git submodule foreach --recursive git checkout master
-git submodule foreach --recursive git pull --rebase
+git submodule foreach git pull --rebase
 echo --------------------------------------------------------
 echo
 echo Updating Submodules: **************DONE*****************
