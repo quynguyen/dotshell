@@ -6,6 +6,9 @@ pushd `dirname $0` > /dev/null
 HERE=`pwd`
 popd > /dev/null
 
+local recurse=""
+[ "$1" == "-r" ] && recurse="--recursive"
+
 echo --------------------------------------------------------
 echo
 echo Updating Submodules: *************START*****************
@@ -13,7 +16,7 @@ echo
 echo --------------------------------------------------------
 git pull --rebase
 #git submodule foreach --recursive git checkout master
-git submodule foreach git pull --rebase
+git submodule foreach $recurse git pull --rebase
 echo --------------------------------------------------------
 echo
 echo Updating Submodules: **************DONE*****************
