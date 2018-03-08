@@ -6,7 +6,7 @@ pushd `dirname $0` > /dev/null
 HERE=`pwd`
 popd > /dev/null
 
-local recurse=""
+recurse=""
 [ "$1" == "-r" ] && recurse="--recursive"
 
 echo --------------------------------------------------------
