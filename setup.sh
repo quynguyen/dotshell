@@ -9,10 +9,11 @@ popd > /dev/null
 echo --------------------------------------------------------
 echo Testing Requirements
 echo --------------------------------------------------------
-[ $(type -t envsubst) ] || \
-	echo "You'll need to install 'envsubst'" &&
-	echo "brew install gettext \#On OS X" && \
+if [ ! $(type -t envsubst) ]; then
+	echo "You'll need to install 'envsubst'"
+	echo "brew install gettext \#On OS X"
 	exit -1
+fi
 
 echo --------------------------------------------------------
 echo The fullpath to here is:

@@ -19,6 +19,7 @@ echo
 echo --------------------------------------------------------
 git submodule update --init --remote
 git submodule foreach --recursive git submodule update --init
+git submodule foreach git config --local core.excludesfile ../../.gitignore_submodules
 echo --------------------------------------------------------
 echo
 echo Initializing Submodules: **************DONE*************
