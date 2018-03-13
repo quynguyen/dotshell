@@ -36,6 +36,15 @@ echo --------------------------------------------------------
 ln -vsnf $STORE $STORELINK
 
 echo --------------------------------------------------------
+echo Overlaying Custom Configurations into their existing locations
+echo --------------------------------------------------------
+for overlay in $( find $OVERLAYS -mindepth 1 -maxdepth 1 -type d -printf "%f\n" ); do
+	for link in `ls $OVERLAYS/$overlay`; do
+		relink $OVERLAYS/$overlay/$link $HOME/$overlay/$link
+	done
+done
+
+echo --------------------------------------------------------
 echo Symlinking Home Dotfiles
 echo --------------------------------------------------------
 for file in $( ls $DOTFILES ); do 
@@ -55,14 +64,6 @@ cat $CACHES | while read cache; do
 	moveAndLink $dotCache $CACHESTORE $name
 done
 
-echo --------------------------------------------------------
-echo Overlaying Custom Configurations into their existing locations
-echo --------------------------------------------------------
-for overlay in $( find $OVERLAYS -mindepth 1  -type d -printf "%f\n" ); do
-	for link in `ls $OVERLAYS/$overlay`; do
-		relink $OVERLAYS/$overlay/$link $HOME/$overlay/$link
-	done
-done
 
 echo --------------------------------------------------------
 echo Handling concats
