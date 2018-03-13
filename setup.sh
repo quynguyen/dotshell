@@ -7,6 +7,14 @@ HERE=`pwd`
 popd > /dev/null
 
 echo --------------------------------------------------------
+echo Testing Requirements
+echo --------------------------------------------------------
+[ $(type -t envsubst) ] || \
+	echo "You'll need to install 'envsubst'" &&
+	echo "brew install gettext \#On OS X" && \
+	exit -1
+
+echo --------------------------------------------------------
 echo The fullpath to here is:
 echo --------------------------------------------------------
 export ENV=$HERE
@@ -58,10 +66,8 @@ done
 echo --------------------------------------------------------
 echo Moving Repos and Caches to $STORE, and replacing them with symlinks
 echo --------------------------------------------------------
-cat $CACHES | while read cache; do 
-	dotCache="$HOME/.${cache}"
-	name=$cache
-	moveAndLink $dotCache $CACHESTORE $name
+envsubst < $CACHES | while read sourceLocation destinationName; do 
+	moveAndLink $sourceLocation $CACHESTORE $destinationName
 done
 
 

@@ -1,3 +1,3 @@
-m2
-npm
-npm-packages
+$HOME/.m2/repository maven-repo
+$HOME/.npm npm-repo
+$HOME/.npm-packages npm-packages-repo
