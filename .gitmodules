@@ -38,3 +38,6 @@
 	path = .submodules/styleguide
 	url = https://github.com/google/styleguide.git
 	branch = gh-pages
+[submodule ".submodules/fonts"]
+	path = .submodules/fonts
+	url = git@github.com:powerline/fonts.git
