@@ -1,3 +1,7 @@
+# Notes to Quy
+As of Mac 10.12+, you use a script
+./bin/mac-remap-right-alt-as-control
+
 #Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
