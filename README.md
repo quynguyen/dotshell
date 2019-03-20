@@ -19,6 +19,7 @@ Checking this repo out into $HOME/.shell and running setup.sh, will fetch and up
 ### Contains plugins and tools for (thus they should be already installed)
 * bash
 * zsh
+* zsh-antigen
 * vim (with +gtk or +gnome)
 * tmux
 
