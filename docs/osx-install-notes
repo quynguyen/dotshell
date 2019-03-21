@@ -29,3 +29,6 @@ tmux 2.6
 vim 8.0.1450
 xmlstarlet 1.6.1
 yarn 1.5.1
+
+#Gem
+gem install tmuxinator
