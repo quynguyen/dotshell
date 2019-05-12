@@ -41,3 +41,6 @@
 [submodule ".submodules/fonts"]
 	path = .submodules/fonts
 	url = git@github.com:powerline/fonts.git
+[submodule ".submodules/awesome-terminal-fonts"]
+	path = .submodules/awesome-terminal-fonts
+	url = https://github.com/gabrielelana/awesome-terminal-fonts

@@ -23,6 +23,17 @@ Checking this repo out into $HOME/.shell and running setup.sh, will fetch and up
 * vim (with +gtk or +gnome)
 * tmux
 
+### Fonts
+
+Powerline -- a category of fonts that vastly improve the ZSH Terminal by adding informative glyths and symbols to the prompt.  There different implementations that fall into the "Powerline" category, and unfortunately there is no single, end-all, be-all definitive implementation.
+But the following 2 make it up:
+* Install Source Code Pro: https://github.com/adobe-fonts/source-code-pro
+** It is a tailor-made monospace font for Terminals and Coding.
+** It contains most of the glyphs needed for Powerline, but not all.
+* Install Awesome Terminal fonts: https://github.com/gabrielelana/awesome-terminal-fonts/wiki/OS-X
+** It contains the rest of the glyphs.
+** However it does require forcibly disabling OS X's strict font controls, every time there is an OS X update.
+
 ### Other requirements
 * Ruby (Mostly for Vim's plugin manager, Pathogen)
 
