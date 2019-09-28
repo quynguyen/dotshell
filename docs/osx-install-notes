@@ -6,29 +6,8 @@ As of Mac 10.12+, you use a script
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 #Brew Install
-antigen 2.2.3
-cdargs 1.35
-coreutils 8.29
-findutils 4.6.0
-gdbm 1.14.1_1
-git 2.16.1
-icu4c 60.2
-jenv 0.4.4
-libevent 2.1.8
-libyaml 0.1.7
-maven 3.5.2
-nmap 7.60
-node 9.6.1
-openssl 1.0.2n
-perl 5.26.1
-python 2.7.14_2
-readline 7.0.3_1
-ruby 2.5.0
-sqlite 3.22.0
-tmux 2.6
-vim 8.0.1450
-xmlstarlet 1.6.1
-yarn 1.5.1
+# This lis below is produced with the commannd
+brew install $(cat ./homebrew-list)
 
 #Gem
 gem install tmuxinator
