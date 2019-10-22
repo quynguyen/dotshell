@@ -33,6 +33,9 @@ But the following 2 make it up:
 * Install Awesome Terminal fonts: https://github.com/gabrielelana/awesome-terminal-fonts/wiki/OS-X
 ** It contains the rest of the glyphs.
 ** However it does require forcibly disabling OS X's strict font controls, every time there is an OS X update.
+** There is a submodule for it here:
+*** ./submodules/awesome-terminal-fonts
+*** Run the install script there
 
 ### Other requirements
 * Ruby (Mostly for Vim's plugin manager, Pathogen)
