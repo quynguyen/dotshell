@@ -1,0 +1,7 @@
+#Brew Install
+# This lis below is produced with the commannd
+apt install $(cat ./apt-package-list)
+
+Custom tools to install:
+jenv
+* git clone https://github.com/gcuisinier/jenv.git ~/.jenv
