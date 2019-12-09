@@ -7,15 +7,6 @@ HERE=`pwd`
 popd > /dev/null
 
 echo --------------------------------------------------------
-echo Testing Requirements
-echo --------------------------------------------------------
-if [ ! $(type -t envsubst) ]; then
-	echo "You'll need to install 'envsubst'"
-	echo "brew install gettext \#On OS X"
-	exit -1
-fi
-
-echo --------------------------------------------------------
 echo The fullpath to here is:
 echo --------------------------------------------------------
 export ENV=$HERE
@@ -79,7 +70,9 @@ echo --------------------------------------------------------
 echo --------------------------------------------------------
 echo Refreshing Fonts
 echo --------------------------------------------------------
-[ $(type -t fc-cache) ] && fc-cache -vf ~/.fonts
+if [[ $(type -a fc-cache) ]]; then
+	fc-cache -vf ~/.fonts
+fi
 
 echo --------------------------------------------------------
 echo Creating app links

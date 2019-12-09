@@ -44,3 +44,6 @@
 [submodule ".submodules/awesome-terminal-fonts"]
 	path = .submodules/awesome-terminal-fonts
 	url = https://github.com/gabrielelana/awesome-terminal-fonts
+[submodule ".submodules/jenv"]
+	path = .submodules/jenv
+	url = git@github.com:jenv/jenv.git
