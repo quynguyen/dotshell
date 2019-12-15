@@ -19,7 +19,6 @@ Checking this repo out into $HOME/.shell and running setup.sh, will fetch and up
 ### Contains plugins and tools for (thus they should be already installed)
 * bash
 * zsh
-* zsh-antigen
 * vim (with +gtk or +gnome)
 * tmux
 
@@ -38,6 +37,7 @@ But the following 2 make it up:
 *** Run the install script there
 
 ### Other requirements
+* JDK (typically an openjdk)
 * Ruby (Mostly for Vim's plugin manager, Pathogen)
 
 ### Nice to Haves
