@@ -1,4 +1,5 @@
 apps/*
 bin
 .store
+*.zwc
 *.swp
