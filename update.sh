@@ -1,10 +1,6 @@
 #!/bin/bash
 
-# Change to the directory where the script lives
-# So that everything is relative to this script directory.
-pushd `dirname $0` > /dev/null
-HERE=`pwd`
-popd > /dev/null
+pushd $( dirname ${BASH_SOURCE:-$0} ) > /dev/null # go there the directory of this currently 'sourced' script ( quietly )
 
 recurse=""
 [ "$1" == "-r" ] && recurse="--recursive"
@@ -25,8 +21,24 @@ echo --------------------------------------------------------
 
 echo --------------------------------------------------------
 echo
+echo Updating Vim Plugins: **************START*****************
+echo
+echo --------------------------------------------------------
+pushd .submodules/vim-config/ > /dev/null
+./updatePlugins.sh
+popd  > /dev/null
+echo --------------------------------------------------------
+echo
+echo Updating Vim Plugins: **************DONE*****************
+echo
+echo --------------------------------------------------------
+
+echo --------------------------------------------------------
+echo
 echo Reloading Shell      **************DONE*****************
 echo
 echo --------------------------------------------------------
 
+chsh -s $(which zsh)
 exec zsh
+popd  > /dev/null # go back to working directory ( quietly )

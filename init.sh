@@ -26,5 +26,5 @@ echo Initializing Submodules: **************DONE*************
 echo
 echo --------------------------------------------------------
 
-source update.sh
+source update.sh -r
 source setup.sh
