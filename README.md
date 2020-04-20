@@ -39,6 +39,8 @@ But the following 2 make it up:
 ### Other requirements
 * JDK (typically an openjdk)
 * Ruby (Mostly for Vim's plugin manager, Pathogen)
+* SDKMAN
+*   curl -s "https://get.sdkman.io" | bash
 
 ### Nice to Haves
 * [Tmuxinator](https://github.com/tmuxinator/tmuxinator) 

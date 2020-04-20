@@ -5,3 +5,6 @@ apt install $(cat ./apt-package-list)
 Custom tools to install:
 jenv
 * git clone https://github.com/gcuisinier/jenv.git ~/.jenv
+sdkman
+* curl -s "https://get.sdkman.io" | bash
+* source "$HOME/.sdkman/bin/sdkman-init.sh"
