@@ -15,7 +15,7 @@ echo Updating Submodules: *************START*****************
 echo
 echo --------------------------------------------------------
 git pull --rebase
-#git submodule foreach --recursive git checkout master
+git submodule foreach --recursive git checkout master
 git submodule foreach $recurse git pull --rebase
 echo --------------------------------------------------------
 echo
