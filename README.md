@@ -25,6 +25,14 @@ Checking this repo out into $HOME/.shell and running setup.sh, will fetch and up
 ### Fonts
 
 Powerline -- a category of fonts that vastly improve the ZSH Terminal by adding informative glyths and symbols to the prompt.  There are different implementations that fall into the "Powerline" category, and unfortunately there is no single, end-all, be-all definitive implementation.
+
+####For Windows
+Download the Powerline repo from Github, and use Powershell to install the "install.ps1"
+* https://github.com/powerline/fonts
+Tips:
+* https://medium.com/@slmeng/how-to-install-powerline-fonts-in-windows-b2eedecace58
+
+####For Linux and OSX
 But the following 2 make it up:
 * Install Source Code Pro: https://github.com/adobe-fonts/source-code-pro
 ** It is a tailor-made monospace font for Terminals and Coding.
