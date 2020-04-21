@@ -1,4 +1,9 @@
 source ~/.vimrc
 set surround
 set ideajoin
-set showmode
+set multiple-cursors
+set commentary
+set ReplaceWithRegister
+set argtextojb
+set textobj-entire
+map \r :action ReformatCode<CR>
