@@ -80,6 +80,7 @@ echo --------------------------------------------------------
 for app in $( ls $APPSTORE ); do
 	prefix=${app%%-*}
 	[ -e $APPSTORE/.versions/$prefix ] && ln -vsnf $APPSTORE/$app $APPS/$prefix
+	#Note: Use the buddy-script ~/.shell/bin/appAdd to add an app to the app store directory
 done
 
 echo --------------------------------------------------------
