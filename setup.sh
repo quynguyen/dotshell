@@ -23,7 +23,7 @@ echo --------------------------------------------------------
 echo Setting up bin dir
 echo --------------------------------------------------------
 ln -vsnf ./.submodules/scripts-config/bin $HERE/bin
-[ ! -e $LOCALBIN ] && mkdir -v -p $LOCAL_BIN
+[ ! -e $LOCAL_BIN ] && mkdir -v -p $LOCAL_BIN
 
 echo --------------------------------------------------------
 echo Setting up apps dir
