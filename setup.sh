@@ -30,7 +30,9 @@ if [[ ! -d $REQUIRED_PACKAGES_INSTALLED ]]; then
 		brew install $(cat $packageList)¬
 	  ;;
 	  Linux)
-		sudo apt install $(cat $packageList)
+		sudo apt update --yes
+		sudo apt upgrade --yes
+		sudo apt --yes --ignore-missing install $(cat $packageList)
 	  ;;
 	esac
 	mkdir -v $REQUIRED_PACKAGES_INSTALLED
@@ -118,7 +120,6 @@ echo --------------------------------------------------------
 echo Updating ~/.zshrc
 echo --------------------------------------------------------
 zsh_lines=(
-	"plugins=(git)"
 	"export ENV=$ENV"
 	"source $ENV/.submodules/shell-config/zsh/profile"
 )
@@ -132,7 +133,6 @@ echo Checking for SDK man
 echo --------------------------------------------------------
 if [ ! -d $HOME/.sdkman ]; then
 	curl -s "https://get.sdkman.io" | bash
-	source "$HOME/.sdkman/bin/sdkman-init.sh"¬ 
 fi
 
 echo --------------------------------------------------------

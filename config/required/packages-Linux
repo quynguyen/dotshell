@@ -1,9 +1,10 @@
+zsh
+curl
 autofs
 cdargs
+x11-utils
 cifs-utils
-curl
 dkms
-gimp
 gnome-shell-extension-dash-to-panel
 gnome-tweaks
 guake
@@ -12,12 +13,7 @@ libcurl4
 libqt5x11extras5
 network-manager-vpnc
 network-manager-vpnc-gnome
-pidgin
-pidgin-encryption
-pidgin-plugin-pack
-pidgin-themes
 python3-pip
 python3-smbc
 tmuxinator
 xclip
-zsh
