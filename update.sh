@@ -32,13 +32,4 @@ echo
 echo Updating Vim Plugins: **************DONE*****************
 echo
 echo --------------------------------------------------------
-
-echo --------------------------------------------------------
-echo
-echo Reloading Shell      **************DONE*****************
-echo
-echo --------------------------------------------------------
-
-chsh -s $(which zsh)
-exec zsh
 popd  > /dev/null # go back to working directory ( quietly )

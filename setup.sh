@@ -19,6 +19,24 @@ echo $ENV
 #############################################################
 source ./.submodules/shell-config/common/core
 
+
+echo --------------------------------------------------------
+echo Install Required Packages
+echo --------------------------------------------------------
+if [[ ! -d $REQUIRED_PACKAGES_INSTALLED ]]; then
+	packageList=$( dynamicLookup $REQUIRED_PACKAGES )
+	case `uname` in
+	  Darwin)
+		brew install $(cat $packageList)¬
+	  ;;
+	  Linux)
+		sudo apt install $(cat $packageList)
+	  ;;
+	esac
+	mkdir -v $REQUIRED_PACKAGES_INSTALLED
+	cp $REQUIRED_PACKAGES $REQUIRED_PACKAGES_INSTALLED
+fi
+
 echo --------------------------------------------------------
 echo Setting up bin dir
 echo --------------------------------------------------------
@@ -107,4 +125,18 @@ zsh_lines=(
 for l in "${zsh_lines[@]}"; do
 	grep -nq "$l" ~/.zshrc || echo "$l" >> ~/.zshrc
 done
-[ -z ${ZSH_NAME+X} ] && exec zsh
+
+
+echo --------------------------------------------------------
+echo Checking for SDK man
+echo --------------------------------------------------------
+if [ ! -d $HOME/.sdkman ]; then
+	curl -s "https://get.sdkman.io" | bash
+	source "$HOME/.sdkman/bin/sdkman-init.sh"¬ 
+fi
+
+echo --------------------------------------------------------
+echo Ensure that Zsh is the default shell.
+echo --------------------------------------------------------
+[ $SHELL != "/bin/zsh" ] && chsh -s $(which zsh)
+exec zsh
