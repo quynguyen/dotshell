@@ -34,7 +34,7 @@ if [[ ! -d $REQUIRED_PACKAGES_INSTALLED ]]; then
 	  ;;
 	esac
 	mkdir -v $REQUIRED_PACKAGES_INSTALLED
-	cp $REQUIRED_PACKAGES $REQUIRED_PACKAGES_INSTALLED
+	cp $packageList $REQUIRED_PACKAGES_INSTALLED
 fi
 
 echo --------------------------------------------------------
