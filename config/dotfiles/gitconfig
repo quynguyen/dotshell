@@ -1,3 +1,5 @@
 [user]
 	name = quynguyen
 	email = quy.nguyen@gmail.com
+[core]
+	autocrlf = input
