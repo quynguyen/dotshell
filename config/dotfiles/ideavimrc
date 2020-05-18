@@ -6,4 +6,5 @@ set commentary
 set ReplaceWithRegister
 set argtextojb
 set textobj-entire
+imap jj <Esc>
 map \r :action ReformatCode<CR>
