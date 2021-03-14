@@ -127,6 +127,12 @@ for l in "${zsh_lines[@]}"; do
 	grep -nq "$l" ~/.zshrc || echo "$l" >> ~/.zshrc
 done
 
+echo --------------------------------------------------------
+echo Checking for NVM
+echo --------------------------------------------------------
+if [ ! -d $HOME/.nvm ]; then
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+fi
 
 echo --------------------------------------------------------
 echo Checking for SDK man
