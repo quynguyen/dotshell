@@ -47,6 +47,8 @@ But the following 2 make it up:
 ### Other requirements
 * JDK (typically an openjdk)
 * Ruby (Mostly for Vim's plugin manager, Pathogen)
+** Preferably via: RubyEnv
+*** https://github.com/rbenv/rbenv
 * SDKMAN
 *   curl -s "https://get.sdkman.io" | bash
 
