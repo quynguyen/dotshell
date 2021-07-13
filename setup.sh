@@ -122,9 +122,17 @@ echo --------------------------------------------------------
 zsh_lines=(
 	"export ENV=$ENV"
 	"source $ENV/.submodules/shell-config/zsh/profile"
+	"eval \"\$(rbenv init -)\""
+	"#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!"
+	"export SDKMAN_DIR=\"\$HOME/.sdkman\""
+	"[[ -s \"\$HOME/.sdkman/bin/sdkman-init.sh\" ]] && source \"\$HOME/.sdkman/bin/sdkman-init.sh\""
+	"export NVM_DIR=\"\$HOME/.nvm\""
+	"[ -s \"\$NVM_DIR/nvm.sh\" ] && \. \"\$NVM_DIR/nvm.sh\"  # This loads nvm"
+	"[ -s \"\$NVM_DIR/bash_completion\" ] && \. \"\$NVM_DIR/bash_completion\"  # This loads nvm bash_completion"
 )
 for l in "${zsh_lines[@]}"; do
-	grep -nq "$l" ~/.zshrc || echo "$l" >> ~/.zshrc
+	# The -F switch of grep inteprets the input pattern as a fixed string
+	grep -Fnq "$l" ~/.zshrc || echo "$l" >> ~/.zshrc
 done
 
 echo --------------------------------------------------------
@@ -139,6 +147,13 @@ echo Checking for SDK man
 echo --------------------------------------------------------
 if [ ! -d $HOME/.sdkman ]; then
 	curl -s "https://get.sdkman.io" | bash
+fi
+
+echo --------------------------------------------------------
+echo Checking for RB Env
+echo --------------------------------------------------------
+if [ ! -d $HOME/.rbenv ]; then
+	curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
 fi
 
 echo --------------------------------------------------------
