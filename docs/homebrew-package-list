@@ -27,7 +27,6 @@ pcre2
 perl
 python
 readline
-ruby
 sqlite
 telnet
 tldr
