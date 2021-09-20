@@ -149,12 +149,12 @@ if [ ! -d $HOME/.sdkman ]; then
 	curl -s "https://get.sdkman.io" | bash
 fi
 
-echo --------------------------------------------------------
-echo Checking for RB Env
-echo --------------------------------------------------------
-if [ ! -d $HOME/.rbenv ]; then
-	curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
-fi
+#echo --------------------------------------------------------
+#echo Checking for RB Env
+#echo --------------------------------------------------------
+#if [ ! -d $HOME/.rbenv ]; then
+#	curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
+#fi
 
 echo --------------------------------------------------------
 echo Ensure that Zsh is the default shell.
