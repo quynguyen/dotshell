@@ -7,7 +7,4 @@ As of Mac 10.12+, you use a script
 
 #Brew Install
 # This lis below is produced with the commannd
-brew install $(cat ./homebrew-list)
-
-#Gem
-gem install tmuxinator
+brew install $(cat ./homebrew-package-list)
