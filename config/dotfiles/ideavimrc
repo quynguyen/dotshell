@@ -8,3 +8,20 @@ set argtextojb
 set textobj-entire
 imap jj <Esc>
 map \r :action ReformatCode<CR>
+
+" Some vimrc remaps from this crazy mofo -- only some of them work with
+" ideavim :(
+" https://www.youtube.com/watch?v=hSHATqh8svM
+"================================================================================================ 
+" Capital "D", and Capital "C" effects from the cursor to the end of the line.
+" Yet, Capital "Y" yanks the entire line.  Why?  Make "Y" yank from the cursor
+" until the end of the line
+nnoremap Y y$
+
+" When the cursor jumps during finds or joins, have the screen/camera track
+" the cursor, keeping the cursor in the middle.  This is a like the David
+" Fincher camera think, or keeping the subject centered in frame, even if the
+" subject is moving ever so slightly
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
