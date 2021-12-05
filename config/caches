@@ -3,3 +3,4 @@ $HOME/.npm npm-repo
 $HOME/.npm-packages npm-packages-repo
 $HOME/.nvm nvm
 $HOME/.profile.d home-profile
+$HOME/.nvim-plugins nvim-plugins
