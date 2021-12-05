@@ -47,3 +47,6 @@
 [submodule ".submodules/jenv"]
 	path = .submodules/jenv
 	url = git@github.com:jenv/jenv.git
+[submodule ".submodules/nvim-config"]
+	path = .submodules/nvim-config
+	url = git@quynguyen.github.com:quynguyen/nvim-config.git
