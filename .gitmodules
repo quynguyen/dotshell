@@ -50,3 +50,6 @@
 [submodule ".submodules/nvim-config"]
 	path = .submodules/nvim-config
 	url = git@quynguyen.github.com:quynguyen/nvim-config.git
+[submodule ".submodules/alacritty-config"]
+	path = .submodules/alacritty-config
+	url = git@quynguyen.github.com:quynguyen/alacritty-config.git
