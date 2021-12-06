@@ -9,8 +9,8 @@ popd > /dev/null
 echo --------------------------------------------------------
 echo The fullpath to here is:
 echo --------------------------------------------------------
-export ENV=$HERE
-echo $ENV
+export DOTSHELL_ENV=$HERE
+echo $DOTSHELL_ENV
 
 #############################################################
 # Source in functions from "core"
@@ -108,8 +108,8 @@ echo --------------------------------------------------------
 echo Updating ~/.bashrc
 echo --------------------------------------------------------
 bash_lines=(
-	"export ENV=$ENV"
-	"source $ENV/.submodules/shell-config/bash/profile"
+	"export DOTSHELL_ENV=$DOTSHELL_ENV"
+	"source $DOTSHELL_ENV/.submodules/shell-config/bash/profile"
 )
 for l in "${bash_lines[@]}"; do
 	grep -nq "$l" ~/.bashrc || echo "$l" >> ~/.bashrc
@@ -120,8 +120,8 @@ echo --------------------------------------------------------
 echo Updating ~/.zshrc
 echo --------------------------------------------------------
 zsh_lines=(
-	"export ENV=$ENV"
-	"source $ENV/.submodules/shell-config/zsh/profile"
+	"export DOTSHELL_ENV=$DOTSHELL_ENV"
+	"source $DOTSHELL_ENV/.submodules/shell-config/zsh/profile"
 	"#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!"
 	"export SDKMAN_DIR=\"\$HOME/.sdkman\""
 	"[[ -s \"\$HOME/.sdkman/bin/sdkman-init.sh\" ]] && source \"\$HOME/.sdkman/bin/sdkman-init.sh\""

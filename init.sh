@@ -9,8 +9,8 @@ popd > /dev/null
 echo --------------------------------------------------------
 echo The fullpath to here is:
 echo --------------------------------------------------------
-export ENV=$HERE
-echo $ENV
+export DOTSHELL_ENV=$HERE
+echo $DOTSHELL_ENV
 
 echo --------------------------------------------------------
 echo
