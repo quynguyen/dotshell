@@ -53,3 +53,6 @@
 [submodule ".submodules/alacritty-config"]
 	path = .submodules/alacritty-config
 	url = git@quynguyen.github.com:quynguyen/alacritty-config.git
+[submodule ".submodules/rails-config"]
+	path = .submodules/rails-config
+	url = git@quynguyen.github.com:quynguyen/rails-config.git
