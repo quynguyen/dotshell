@@ -1,7 +1,7 @@
 # interpreter for shell commands
 set shell sh
 
-set previewer /usr/local/bin/src-hilite-lesspipe.sh
+set previewer /opt/homebrew/bin/src-hilite-lesspipe.sh
 
 # set '-eu' options for shell commands
 # These options are used to have safer shell commands. Option '-e' is used to

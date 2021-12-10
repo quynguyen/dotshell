@@ -27,6 +27,20 @@ if [[ ! -d $REQUIRED_PACKAGES_INSTALLED ]]; then
 	packageList=$( dynamicLookup $REQUIRED_PACKAGES )
 	case `uname` in
 	  Darwin)
+		echo --------------------------------------------------------
+		echo Brew: Installing taps
+		echo --------------------------------------------------------
+		cat $REQUIRED_TAPS | while read name; do
+			brew tap $name
+		done
+		echo ""
+		echo --------------------------------------------------------
+		echo Brew: Installing casks
+		echo --------------------------------------------------------
+		brew install --cask $(cat $REQUIRED_CASKS)
+		echo --------------------------------------------------------
+		echo Brew: Installing packages
+		echo --------------------------------------------------------
 		brew install $(cat $packageList)¬
 	  ;;
 	  Linux)
