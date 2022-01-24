@@ -1,4 +1,9 @@
 source ~/.vimrc
+
+Plug 'tpope/surround'
+Plug 'tpope/vim-commentary'
+Plug 'vim-scripts/argtextobj.vim'
+
 set surround
 set ideajoin
 set multiple-cursors
@@ -7,7 +12,7 @@ set ReplaceWithRegister
 set argtextojb
 set textobj-entire
 imap jj <Esc>
-map \r :action ReformatCode<CR>
+
 
 " Some vimrc remaps from this crazy mofo -- only some of them work with
 " ideavim :(
@@ -25,3 +30,26 @@ nnoremap Y y$
 nnoremap n nzzzv
 nnoremap N Nzzzv
 nnoremap J mzJ`z
+
+
+"================================================================================
+" Vim IDE style shortcuts
+"================================================================================
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gD :action GotoTypeDeclaration<CR>
+nnoremap g[ :action Back<CR>
+nnoremap gi :action QuickImplementations<CR>
+nnoremap gf :action Find<CR>
+nnoremap g] :action Forward<CR>
+nnoremap g] :action Forward<CR>
+nnoremap <C-o> :action Back<CR>
+nnoremap <C-i> :action Forward<CR>
+
+:map <leader>b <Action>(ToggleLineBreakPoint)
+:map <leader>e <Action>(ShowErrorDescription)
+:map <leader>d <Action>(Debug)
+:map <leader>r <Action>(ReformatCode)
+"================================================================================
+" Neo Vim
+"================================================================================
+nnoremap <leader>f <cmd>Telescope find_files<cr>
