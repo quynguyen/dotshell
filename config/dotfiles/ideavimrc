@@ -41,7 +41,6 @@ nnoremap g[ :action Back<CR>
 nnoremap gi :action QuickImplementations<CR>
 nnoremap gf :action Find<CR>
 nnoremap g] :action Forward<CR>
-nnoremap g] :action Forward<CR>
 nnoremap <C-o> :action Back<CR>
 nnoremap <C-i> :action Forward<CR>
 
