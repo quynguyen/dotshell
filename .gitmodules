@@ -53,3 +53,7 @@
 [submodule ".submodules/rails-config"]
 	path = .submodules/rails-config
 	url = git@quynguyen.github.com:quynguyen/rails-config.git
+[submodule ".submodules/vapour-neovim"]
+	path = .submodules/vapour-neovim
+	url = git@quynguyen.github.com:quynguyen/VapourNvim.git
+	branch = quy-user-config
