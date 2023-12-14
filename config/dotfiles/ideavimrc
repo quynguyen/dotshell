@@ -33,7 +33,8 @@ let mapleader=" "
 " until the end of the line
 nnoremap Y y$
 
-" When the cursor jumps during finds or joins, have the screen/camera track
+" When the cursor jumps during find
+ or joins, have the screen/camera track
 " the cursor, keeping the cursor in the middle.  This is a like the David
 " Fincher camera think, or keeping the subject centered in frame, even if the
 " subject is moving ever so slightly
@@ -145,7 +146,7 @@ nnoremap gt :action GotoTest<CR>
 "nnoremap g[ :action Back<CR>
 "nnoremap g] :action Forward<CR>
 """ Tool windows
-nnoremap <c-l> :action JumpToLastWindow<CR>
+"nnoremap <c-l> :action JumpToLastWindow<CR>
 nnoremap <c-x> :action HideAllWindows<CR>
 """ Running and Debugging
 nnoremap ,r :action ContextRun<CR>
