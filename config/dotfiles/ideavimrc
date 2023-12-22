@@ -18,6 +18,13 @@ Plug 'chrisbra/matchit'
 
 set ideajoin
 
+" By default, with ideavim, during an IDE refactor, the text being refactored
+" is in command mode.  This is not intuitive.  This setting changes the
+" behavior so that the text being refactored is in insert mode.
+" That the option is named "select" is counter-intuitive, but it works;
+" Personally, I would have named the option "insert".
+set idearefactormode=select
+
 imap jj <Esc>
 imap jk <Esc>
 imap kj <Esc>
