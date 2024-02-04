@@ -100,8 +100,6 @@ nnoremap <c-\> :action SplitVertically<CR>
 nnoremap <c--> :action SplitHorizontally<CR>
 nnoremap <c-=> :action Unsplit<CR>
 nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
-sethandler <c-j> a:vim
-sethandler <c-k> a:vim
 nnoremap <m-h> <c-w>h
 nnoremap <m-l> <c-w>l
 nnoremap <m-j> <c-w>j
@@ -146,6 +144,7 @@ nnoremap <leader>b :action ShowNavBar<CR>
 nnoremap <c-s> :action FileStructurePopup<CR>
 nnoremap <c-y> :action GotoSymbol<CR>
 nnoremap gc :action GotoClass<CR>
+nnoremap gr :action GotoRelated<CR>
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gs :action GotoSuperMethod<CR>
@@ -160,8 +159,8 @@ nnoremap ,r :action ContextRun<CR>
 nnoremap ,c :action RunClass<CR>
 nnoremap ,f :action ChooseRunConfiguration<CR>
 nnoremap ,t :action ActivateRunToolWindow<CR>
-nnoremap ,u :action Rerun<CR>
-nnoremap ,f :action RerunFailedTests<CR>
+nnoremap ,u :action Rerun<CR
+noremap ,f :action RerunFailedTests<CR>
 nnoremap ,b :action ToggleLineBreakpoint<CR>
 nnoremap ,d :action ContextDebug<CR>
 nnoremap ,n :action ActivateDebugToolWindow<CR>
