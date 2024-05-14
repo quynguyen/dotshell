@@ -103,14 +103,14 @@ cmd zip ${{
 
 # Added by Quy -- to copy the absolute path
 cmd copy-filepath ${{
-    echo -n $fx | pbcopy
+    printf "%s" $fx | pbcopy
 }}
 
 map P copy-filepath
 
 # Added by Quy -- to copy the filename
 cmd copy-filename ${{
-    echo -n $(basename $fx) | pbcopy
+    printf "%s" $(basename $fx) | pbcopy
 }}
 
 map Y copy-filename
